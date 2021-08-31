@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.box-shadow {
+    box-shadow: 0px 0px 40px 25px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0px 0px 40px 25px rgba(0,0,0,0.1);
+}
+
+.box-shadow-tight {
+    box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.1);
+}
+
+.linear-bg {
+    background: linear-gradient(180deg, rgba(245,248,253,1) 0%, rgba(238,242,252,1) 100%);
+}
+
+.linear-bg:hover {
+    background: #e8ecf6;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 40px 25px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0px 0px 40px 25px rgba(0,0,0,0.1);
+}
+
+.card-little:hover {
+    box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.1);
+}

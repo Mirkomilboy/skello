@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skello</title>
+    <link rel="icon" href="assets/logo-self.png">
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="nav fixed z-40 top-0 left-0 right-0 w-full">
+            <div class="max-w-7xl mx-auto flex items-center justify-between h-20 px-5 md:px-12">
+                <div class="w-full flex items-center justify-between">
+                    <div class="flex">
+                        <a class="w-24" href="index.html">
+                            <img src="assets/logo.svg" alt="">
+                        </a>
+
+                        <div class="w-px h-6 mx-4 bg-gray-300"></div>
+
+                        <a class="font-bold" href="#">Blog</a>
+                    </div>
+
+                    <!-- desktop menu -->
+                    <div class="hidden lg:flex items-center justify-between w-full">
+                        <div class="flex">
+                            <!-- dropdown -->
+                            <div class="relative group ml-28">
+                                <div class="flex items-center hover:bg-brand-light-blue transition ease-in-out space-x-3 rounded py-2 px-4">
+                                    <p class="font-medium">Sectors</p>
+                                    <svg class="group-hover:rotate-180 transform transition ease-in-out text-black h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </div>
+                                <div class="hidden group-hover:block absolute top-10 -left-16 w-80 box-shadow-tight bg-white rounded-lg font-medium py-6 px-5">
+                                    <a class="block p-3 rounded hover:bg-brand-light-blue transition ease-in-out" href="#">Restoration</a>
+                                    <a class="block p-3 rounded hover:bg-brand-light-blue transition ease-in-out" href="#">Food shops</a>
+                                    <a class="block p-3 rounded hover:bg-brand-light-blue transition ease-in-out" href="#">Hotel</a>
+                                    <a class="block p-3 rounded hover:bg-brand-light-blue transition ease-in-out" href="#">Health</a>
+                                    <a class="block p-3 rounded hover:bg-brand-light-blue transition ease-in-out" href="#">Wellness & leisure services</a>
+                                    <a class="block p-3 rounded hover:bg-brand-light-blue transition ease-in-out" href="#">Bakery pastry</a>
+                                    <a class="block p-3 rounded hover:bg-brand-light-blue transition ease-in-out" href="#">Specialized distribution</a>
+                                </div>
+                            </div>
+
+                            <a class="font-medium hover:bg-brand-light-blue transition ease-in-out space-x-3 rounded ml-8 py-2 px-4" href="#">Our team</a>
+
+                            <a class="font-medium hover:bg-brand-light-blue transition ease-in-out space-x-3 rounded ml-8 py-2 px-4" href="#">Our solution</a>
+                        </div>
+
+                        <a class=" font-medium bg-blue-500 text-white rounded py-2 px-4 hover:bg-opacity-90 transition ease-in-out" href="#">Skello.io</a>
+                    </div>
+
+                    <!-- hamburger button -->
+                    <button class="menuBtn lg:hidden">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- mobile menu -->
+        <div class="mobileMenu fixed z-40 top-0 left-0 right-0 w-full -translate-y-full transform transition ease-in-out duration-300 bg-brand-blue h-screen px-5 md:px-12">
+            <div class="w-full flex items-center justify-between h-20">
+                <div class="flex">
+                    <a class="w-24" href="index.html">
+                        <img src="assets/logo-white.svg" alt="">
+                    </a>
+
+                    <div class="w-px h-6 mx-4 bg-white"></div>
+
+                    <a class="font-bold text-white" href="#">Blog</a>
+                </div>
+
+                <!-- x button -->
+                <button class="menuBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- menu -->
+            <div class="w-full">
+                <!-- dropdown -->
+                <div class="group border-b border-gray-400/30 border-t">
+                    <div class="flex items-center justify-between hover:bg-blue-800/50 transition ease-in-out py-4 px-4">
+                        <p class="font-medium text-white">Sectors</p>
+                        <svg class="group-hover:rotate-180 transform transition ease-in-out text-white h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                    <div class="hidden group-hover:block bg-brand-blue rounded-lg font-medium space-y-0.5 py-6 px-5">
+                        <a class="block p-3 rounded bg-white/10 transition ease-in-out text-white" href="#">Restoration</a>
+                        <a class="block p-3 rounded bg-white/10 transition ease-in-out text-white" href="#">Food shops</a>
+                        <a class="block p-3 rounded bg-white/10 transition ease-in-out text-white" href="#">Hotel</a>
+                        <a class="block p-3 rounded bg-white/10 transition ease-in-out text-white" href="#">Health</a>
+                        <a class="block p-3 rounded bg-white/10 transition ease-in-out text-white" href="#">Wellness & leisure services</a>
+                        <a class="block p-3 rounded bg-white/10 transition ease-in-out text-white" href="#">Bakery pastry</a>
+                        <a class="block p-3 rounded bg-white/10 transition ease-in-out text-white" href="#">Specialized distribution</a>
+                    </div>
+                </div>
+
+                <a class="block font-medium border-b border-gray-400/30 hover:bg-blue-800/50 transition ease-in-out text-white py-4 px-4" href="#">Our team</a>
+
+                <a class="block font-medium border-b border-gray-400/30 hover:bg-blue-800/50 transition ease-in-out text-white py-4 px-4" href="#">Our solution</a>
+
+            </div>
+            <a class="absolute bottom-8 left-12 right-12 block text-center font-medium bg-blue-600 text-white rounded py-4 px-4 hover:bg-opacity-90 transition ease-in-out" href="#">Skello.io</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- hero -->
+        <section class="h-500 flex flex-col items-center justify-center py-20 px-5">
+            <h1 class="text-3xl md:text-5xl font-bold pb-6">Plan your successes!</h1>
+            <p class="text-gray-500 pb-6">Full access to news in your sector!</p>
+            <form class="bg-white rounded-lg box-shadow flex flex-col sm:flex-row items-center w-full sm:w-500 space-y-2 sm:space-y-0 sm:space-x-2 p-6 mb-6" action="">
+                <input class="bg-gray-200 placeholder-gray-500 w-full sm:w-2/3 rounded h-14 p-3 focus:outline-none" type="email" name="" id="" placeholder="Enter your e-mail">
+                <input class="font-medium rounded bg-blue-500 hover:bg-opacity-90 transition ease-in-out text-white w-40 sm:w-1/3 h-14" type="submit" value="Register now">
+            </form>
+            <!-- social icons -->
+            <div class="flex items-center space-x-4">
+                <a class="linear-bg transition ease-in-out duration-500 rounded-full flex items-center justify-center w-12 h-12" href="https://www.linkedin.com/company/skello/" target="_blank">
+                    <img src="https://uploads-ssl.webflow.com/5f180e58c1906f15359f4591/5f71a9889eed334ae757340c_Group%2011%20(2)%20(1).svg" loading="lazy" alt="black linkedin logo">
+                </a>
+                <a class="linear-bg transition ease-in-out duration-500 rounded-full flex items-center justify-center w-12 h-12" href="https://www.linkedin.com/company/skello/" target="_blank">
+                    <img src="https://uploads-ssl.webflow.com/5f180e58c1906f15359f4591/5f71a9883e9d5df8be922579_Vector%20(25)%20(1).svg" loading="lazy" alt="black twitter logo">
+                </a>
+                <a class="linear-bg transition ease-in-out duration-500 rounded-full flex items-center justify-center w-12 h-12" href="https://www.linkedin.com/company/skello/" target="_blank">
+                    <img src="https://uploads-ssl.webflow.com/5f180e58c1906f15359f4591/5f71a9887328f55a21b72796_Vector%20(26)%20(1).svg" loading="lazy" alt="black facebook logo">
+                </a>
+                <a class="linear-bg transition ease-in-out duration-500 rounded-full flex items-center justify-center w-12 h-12" href="https://www.linkedin.com/company/skello/" target="_blank">
+                    <img src="https://uploads-ssl.webflow.com/5f180e58c1906f15359f4591/5f71a9bd3c67c7d6b487531a_INSTA%20(1).svg" loading="lazy" width="23" alt="black instagram logo">
+                </a>
+            </div>
+        </section>
+
+        <!-- cards -->
+        <section class="max-w-7xl mx-auto lg:flex items-start w-full px-5 sm:px-12">
+            <!-- left -->
+            <a class="card block w-full lg:w-1/2 rounded-2xl p-5 space-y-4 hover:scale-105 transform transition ease-in-out duration-500 mb-10 lg:mb-0" href="#">
+                <img class="w-full rounded-2xl" src="assets/hero-card.jpg" alt="">
+                <div class="flex items-center text-sm space-x-2">
+                    <p class=" font-medium bg-blue-500 text-white rounded py-1 px-3 hover:bg-opacity-90 transition ease-in-out" href="#">Sectors</p>
+                    <p>•</p>
+                    <p>3 min</p>
+                </div>
+                <h1 class="text-3xl font-medium">Automation of team schedules: why and how does it work?</h1>
+                <p class="text-gray-400 font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, alias voluptas ipsum vero laboriosam voluptate...</p>
+                <div class="flex items-center space-x-4">
+                    <div class="rounded-full w-8 h-8">
+                        <img class="w-full" src="assets/person.png" alt="">
+                    </div>
+                    <p>Minea</p>
+                </div>
+            </a>
+
+            <!-- right -->
+            <div class="w-full lg:w-1/2 space-y-5 lg:pl-40">
+                <a class="card-little flex items-start rounded-lg hover:scale-105 transform transition ease-in-out duration-500 space-x-4 p-3" href="#">
+                    <img class="w-28 h-28 rounded-lg" src="assets/hero-card.jpg" alt="">
+                    <div class="pb-4">
+                        <div class="flex items-center text-sm space-x-2">
+                            <p class=" font-medium bg-yellow-500 text-white rounded py-1 px-3 hover:bg-opacity-90 transition ease-in-out" href="#">Our team</p>
+                            <p>•</p>
+                            <p>3 min</p>
+                        </div>
+                        <h2 class="text-xl">👋 Come spend a month with us!</h2>
+                    </div>
+                </a>
+
+                <a class="card-little flex items-start rounded-lg hover:scale-105 transform transition ease-in-out duration-500 space-x-4 p-3" href="#">
+                    <img class="w-28 h-28 rounded-lg" src="assets/hero-card.jpg" alt="">
+                    <div class="pb-4">
+                        <div class="flex items-center text-sm space-x-2">
+                            <p class=" font-medium bg-blue-500 text-white rounded py-1 px-3 hover:bg-opacity-90 transition ease-in-out" href="#">Sectors</p>
+                            <p>•</p>
+                            <p>3 min</p>
+                        </div>
+                        <h2 class="text-xl">👋 Come spend a month with us!</h2>
+                    </div>
+                </a>
+
+                <a class="card-little flex items-start rounded-lg hover:scale-105 transform transition ease-in-out duration-500 space-x-4 p-3" href="#">
+                    <img class="w-28 h-28 rounded-lg" src="assets/hero-card.jpg" alt="">
+                    <div class="pb-4">
+                        <div class="flex items-center text-sm space-x-2">
+                            <p class=" font-medium bg-blue-500 text-white rounded py-1 px-3 hover:bg-opacity-90 transition ease-in-out" href="#">Sectors</p>
+                            <p>•</p>
+                            <p>3 min</p>
+                        </div>
+                        <h2 class="text-xl">👋 Come spend a month with us!</h2>
+                    </div>
+                </a>
+
+                <a class="card-little flex items-start rounded-lg hover:scale-105 transform transition ease-in-out duration-500 space-x-4 p-3" href="#">
+                    <img class="w-28 h-28 rounded-lg" src="assets/hero-card.jpg" alt="">
+                    <div class="pb-4">
+                        <div class="flex items-center text-sm space-x-2">
+                            <p class=" font-medium bg-blue-500 text-white rounded py-1 px-3 hover:bg-opacity-90 transition ease-in-out" href="#">Sectors</p>
+                            <p>•</p>
+                            <p>3 min</p>
+                        </div>
+                        <h2 class="text-xl">👋 Come spend a month with us!</h2>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <hr class="w-full h-0.5 border-gray-300 my-12">
+
+        <!-- our team -->
+        <section class="max-w-7xl mx-auto px-5 sm:px-12">
+            <!-- heading -->
+            <div class="flex items-center justify-between pb-5">
+                <h1 class="text-3xl font-medium">Our team</h1>
+                <a class="hidden sm:flex items-center space-x-3 hover:bg-blue-100 transition ease-in-out rounded py-2 px-4" href="#">
+                    <p class="text-blue-600 font-medium">View all articles</p>
+                    <div class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-500">
+                        <svg class="h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <!-- cards -->
+            <div class="md:flex items-start w-full space-y-4 md:space-y-0 md:space-x-4">
+                <a class="card block w-full md:w-1/3 rounded-xl p-3 space-y-4 hover:scale-105 transform transition ease-in-out duration-500" href="#">
+                    <img class="w-full rounded-xl" src="assets/hero-card.jpg" alt="">
+                    <div class="flex items-center text-sm space-x-2">
+                        <p class=" font-medium bg-blue-500 text-white rounded py-1 px-3 hover:bg-opacity-90 transition ease-in-out" href="#">Sectors</p>
+                        <p>•</p>
+                        <p>3 min</p>
+                    </div>
+                    <h2 class="text-xl">👋 Come spend a month with us!</h2>
+                    <p class="text-gray-400 font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, alias voluptas ipsum vero laboriosam voluptate...</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="rounded-full w-8 h-8">
+                            <img class="w-full" src="assets/person.png" alt="">
+                        </div>
+                        <p>Minea</p>
+                    </div>
+                </a>
+
+                <a class="card block w-full md:w-1/3 rounded-xl p-3 space-y-4 hover:scale-105 transform transition ease-in-out duration-500" href="#">
+                    <img class="w-full rounded-xl" src="assets/hero-card.jpg" alt="">
+                    <div class="flex items-center text-sm space-x-2">
+                        <p class=" font-medium bg-blue-500 text-white rounded py-1 px-3 hover:bg-opacity-90 transition ease-in-out" href="#">Sectors</p>
+                        <p>•</p>
+                        <p>3 min</p>
+                    </div>
+                    <h2 class="text-xl">👋 Come spend a month with us!</h2>
+                    <p class="text-gray-400 font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, alias voluptas ipsum vero laboriosam voluptate...</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="rounded-full w-8 h-8">
+                            <img class="w-full" src="assets/person.png" alt="">
+                        </div>
+                        <p>Minea</p>
+                    </div>
+                </a>
+
+                <a class="card block w-full md:w-1/3 rounded-xl p-3 space-y-4 hover:scale-105 transform transition ease-in-out duration-500" href="#">
+                    <img class="w-full rounded-xl" src="assets/hero-card.jpg" alt="">
+                    <div class="flex items-center text-sm space-x-2">
+                        <p class=" font-medium bg-blue-500 text-white rounded py-1 px-3 hover:bg-opacity-90 transition ease-in-out" href="#">Sectors</p>
+                        <p>•</p>
+                        <p>3 min</p>
+                    </div>
+                    <h2 class="text-xl">👋 Come spend a month with us!</h2>
+                    <p class="text-gray-400 font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, alias voluptas ipsum vero laboriosam voluptate...</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="rounded-full w-8 h-8">
+                            <img class="w-full" src="assets/person.png" alt="">
+                        </div>
+                        <p>Minea</p>
+                    </div>
+                </a>
+            </div>
+
+            <a class="flex sm:hidden items-center ml-auto w-48 space-x-3 hover:bg-blue-100 transition ease-in-out rounded py-2 px-4 mt-4" href="#">
+                <p class="text-blue-600 font-medium">View all articles</p>
+                <div class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-500">
+                    <svg class="h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </div>
+            </a>
+        </section>
+
+        <hr class="w-full h-0.5 border-gray-300 my-12">
+
+        <!-- our solution -->
+        <section class="max-w-7xl mx-auto px-5 sm:px-12">
+            <!-- heading -->
+            <div class="flex items-center justify-between pb-5">
+                <h1 class="text-3xl font-medium">Our solution</h1>
+                <a class="hidden sm:flex items-center space-x-3 hover:bg-blue-100 transition ease-in-out rounded py-2 px-4" href="#">
+                    <p class="text-blue-600 font-medium">View all articles</p>
+                    <div class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-500">
+                        <svg class="h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <!-- cards -->
+            <div class="md:flex items-start w-full space-y-4 md:space-y-0 md:space-x-4">
+                <a class="card block w-full md:w-1/3 rounded-xl p-3 space-y-4 hover:scale-105 transform transition ease-in-out duration-500" href="#">
+                    <img class="w-full rounded-xl" src="assets/hero-card.jpg" alt="">
+                    <div class="flex items-center text-sm space-x-2">
+                        <p class=" font-medium bg-blue-500 text-white rounded py-1 px-3 hover:bg-opacity-90 transition ease-in-out" href="#">Sectors</p>
+                        <p>•</p>
+                        <p>3 min</p>
+                    </div>
+                    <h2 class="text-xl">👋 Come spend a month with us!</h2>
+                    <p class="text-gray-400 font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, alias voluptas ipsum vero laboriosam voluptate...</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="rounded-full w-8 h-8">
+                            <img class="w-full" src="assets/person.png" alt="">
+                        </div>
+                        <p>Minea</p>
+                    </div>
+                </a>
+
+                <a class="card block w-full md:w-1/3 rounded-xl p-3 space-y-4 hover:scale-105 transform transition ease-in-out duration-500" href="#">
+                    <img class="w-full rounded-xl" src="assets/hero-card.jpg" alt="">
+                    <div class="flex items-center text-sm space-x-2">
+                        <p class=" font-medium bg-blue-500 text-white rounded py-1 px-3 hover:bg-opacity-90 transition ease-in-out" href="#">Sectors</p>
+                        <p>•</p>
+                        <p>3 min</p>
+                    </div>
+                    <h2 class="text-xl">👋 Come spend a month with us!</h2>
+                    <p class="text-gray-400 font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, alias voluptas ipsum vero laboriosam voluptate...</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="rounded-full w-8 h-8">
+                            <img class="w-full" src="assets/person.png" alt="">
+                        </div>
+                        <p>Minea</p>
+                    </div>
+                </a>
+
+                <a class="card block w-full md:w-1/3 rounded-xl p-3 space-y-4 hover:scale-105 transform transition ease-in-out duration-500" href="#">
+                    <img class="w-full rounded-xl" src="assets/hero-card.jpg" alt="">
+                    <div class="flex items-center text-sm space-x-2">
+                        <p class=" font-medium bg-blue-500 text-white rounded py-1 px-3 hover:bg-opacity-90 transition ease-in-out" href="#">Sectors</p>
+                        <p>•</p>
+                        <p>3 min</p>
+                    </div>
+                    <h2 class="text-xl">👋 Come spend a month with us!</h2>
+                    <p class="text-gray-400 font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, alias voluptas ipsum vero laboriosam voluptate...</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="rounded-full w-8 h-8">
+                            <img class="w-full" src="assets/person.png" alt="">
+                        </div>
+                        <p>Minea</p>
+                    </div>
+                </a>
+            </div>
+
+            <a class="flex sm:hidden items-center ml-auto w-48 space-x-3 hover:bg-blue-100 transition ease-in-out rounded py-2 px-4 mt-4" href="#">
+                <p class="text-blue-600 font-medium">View all articles</p>
+                <div class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-500">
+                    <svg class="h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </div>
+            </a>
+        </section>
+
+        <hr class="w-full h-0.5 border-gray-300 my-12">
+
+        <!-- sectors -->
+        <section class="max-w-7xl mx-auto px-5 sm:px-12">
+            <!-- heading -->
+            <div class="flex items-center justify-between pb-5">
+                <h1 class="text-3xl font-medium">Sectors</h1>
+                <a class="hidden sm:flex items-center space-x-3 hover:bg-blue-100 transition ease-in-out rounded py-2 px-4" href="#">
+                    <p class="text-blue-600 font-medium">View all articles</p>
+                    <div class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-500">
+                        <svg class="h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <!-- cards -->
+            <div class="md:flex items-start w-full space-y-4 md:space-y-0 md:space-x-4">
+                <a class="card block w-full md:w-1/3 rounded-xl p-3 space-y-4 hover:scale-105 transform transition ease-in-out duration-500" href="#">
+                    <img class="w-full rounded-xl" src="assets/hero-card.jpg" alt="">
+                    <div class="flex items-center text-sm space-x-2">
+                        <p class=" font-medium bg-blue-500 text-white rounded py-1 px-3 hover:bg-opacity-90 transition ease-in-out" href="#">Sectors</p>
+                        <p>•</p>
+                        <p>3 min</p>
+                    </div>
+                    <h2 class="text-xl">👋 Come spend a month with us!</h2>
+                    <p class="text-gray-400 font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, alias voluptas ipsum vero laboriosam voluptate...</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="rounded-full w-8 h-8">
+                            <img class="w-full" src="assets/person.png" alt="">
+                        </div>
+                        <p>Minea</p>
+                    </div>
+                </a>
+
+                <a class="card block w-full md:w-1/3 rounded-xl p-3 space-y-4 hover:scale-105 transform transition ease-in-out duration-500" href="#">
+                    <img class="w-full rounded-xl" src="assets/hero-card.jpg" alt="">
+                    <div class="flex items-center text-sm space-x-2">
+                        <p class=" font-medium bg-blue-500 text-white rounded py-1 px-3 hover:bg-opacity-90 transition ease-in-out" href="#">Sectors</p>
+                        <p>•</p>
+                        <p>3 min</p>
+                    </div>
+                    <h2 class="text-xl">👋 Come spend a month with us!</h2>
+                    <p class="text-gray-400 font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, alias voluptas ipsum vero laboriosam voluptate...</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="rounded-full w-8 h-8">
+                            <img class="w-full" src="assets/person.png" alt="">
+                        </div>
+                        <p>Minea</p>
+                    </div>
+                </a>
+
+                <a class="card block w-full md:w-1/3 rounded-xl p-3 space-y-4 hover:scale-105 transform transition ease-in-out duration-500" href="#">
+                    <img class="w-full rounded-xl" src="assets/hero-card.jpg" alt="">
+                    <div class="flex items-center text-sm space-x-2">
+                        <p class=" font-medium bg-blue-500 text-white rounded py-1 px-3 hover:bg-opacity-90 transition ease-in-out" href="#">Sectors</p>
+                        <p>•</p>
+                        <p>3 min</p>
+                    </div>
+                    <h2 class="text-xl">👋 Come spend a month with us!</h2>
+                    <p class="text-gray-400 font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, alias voluptas ipsum vero laboriosam voluptate...</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="rounded-full w-8 h-8">
+                            <img class="w-full" src="assets/person.png" alt="">
+                        </div>
+                        <p>Minea</p>
+                    </div>
+                </a>
+            </div>
+
+            <a class="flex sm:hidden items-center ml-auto w-48 space-x-3 hover:bg-blue-100 transition ease-in-out rounded py-2 px-4 mt-4" href="#">
+                <p class="text-blue-600 font-medium">View all articles</p>
+                <div class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-500">
+                    <svg class="h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </div>
+            </a>
+        </section>
+
+        <hr class="w-full h-0.5 border-gray-300 my-12">
+
+        <!-- @skelloapp -->
+        <section class="max-w-7xl mx-auto px-5 sm:px-12">
+            <!-- heading -->
+            <div class="flex items-center justify-between pb-5">
+                <div class="flex items-center space-x-4">
+                    <h1 class="text-3xl font-medium">@skelloapp</h1>
+                    <svg class="w-5 h-5 text-black mt-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                    </svg>
+                </div>
+                <a class="hidden sm:flex items-center space-x-3 hover:bg-blue-100 transition ease-in-out rounded py-2 px-4" href="#">
+                    <p class="text-blue-600 font-medium">Follow us!</p>
+                    <div class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-500">
+                        <svg class="h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <!-- cards -->
+            <div class="md:flex items-start w-full space-y-4 md:space-y-0 md:space-x-5">
+                <a class="w-full block md:w-1/3 rounded-xl" href="#">
+                    <img class="w-full h-80 object-cover rounded-xl" src="assets/card.jpg" alt="">
+                </a>
+                <a class="w-full block md:w-1/3 rounded-xl" href="#">
+                    <img class="w-full h-80 object-cover rounded-xl" src="assets/card.jpg" alt="">
+                </a>
+                <a class="w-full block md:w-1/3 rounded-xl" href="#">
+                    <img class="w-full h-80 object-cover rounded-xl" src="assets/card.jpg" alt="">
+                </a>
+            </div>
+
+            <a class="flex sm:hidden items-center ml-auto w-40 space-x-3 hover:bg-blue-100 transition ease-in-out rounded py-2 px-4 mt-4" href="#">
+                <p class="text-blue-600 font-medium">Follow us!</p>
+                <div class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-500">
+                    <svg class="h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </div>
+            </a>
+        </section>
+
+        <!-- plan your successes -->
+        <section class="flex flex-col items-center justify-center py-20 lg:pt-40 lg:pb-60 px-5">
+            <h1 class="text-3xl md:text-5xl font-bold pb-6">Plan your successes!</h1>
+            <p class="text-gray-500 pb-6">Full access to news in your sector!</p>
+            <div class="relative w-full sm:w-auto">
+                <form class="relative z-20 bg-white rounded-lg box-shadow flex flex-col sm:flex-row items-center w-full sm:w-500 space-y-2 sm:space-y-0 sm:space-x-2 p-6 mb-6" action="">
+                    <input class="bg-gray-200 placeholder-gray-500 w-full sm:w-2/3 rounded h-14 p-3 focus:outline-none" type="email" name="" id="" placeholder="Enter your e-mail">
+                    <input class="font-medium rounded bg-blue-500 hover:bg-opacity-90 transition ease-in-out text-white w-40 sm:w-1/3 h-14" type="submit" value="Register now">
+                </form>
+                <img class="hidden lg:block absolute z-0 -left-40 -top-12" src="assets/shape-light-blue.svg" alt="">
+                <img class="hidden lg:block absolute z-0 bootom-0 -right-10" src="assets/shape-dark-blue.svg" alt="">
+                <img class="hidden lg:block absolute z-0 -top-20 -right-24" src="assets/shape-yellow.svg" alt="">
+            </div>
+        </section>
+    </main>
+
+    <footer class="max-w-7xl mx-auto px-5 sm:px-12">
+        <div class="flex flex-wrap items-start justify-between text-gray-500 text-medium text-sm">
+            <div class="w-full sm:w-1/2 lg:w-1/4 space-y-6">
+                <img src="assets/logo.svg" alt="">
+                <p>© Skello, 112, Avenue de Paris - CS 60002 94306 Vincennes Cedex</p>
+            </div>
+
+            <div class="w-full sm:w-1/2 lg:w-1/4 space-y-3 sm:pl-4 pt-10 sm:pt-0">
+                <h4 class="text-xl font-bold text-gray-900 pb-3">Our product</h4>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Make your schedule in a few clicks</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Plan smarter with Smart Planner</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Communicate in real time</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Automatically process your payroll</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Manage your different sites</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Manage arrivals and departures</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Generate documents for your employees</a>
+            </div>
+
+            <div class="w-full sm:w-1/2 lg:w-1/4 space-y-3 lg:pl-4 pt-10 lg:pt-0">
+                <h4 class="text-xl font-bold text-gray-900 pb-3">Solutions</h4>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">All sectors</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Restoration</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Hotel</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Bakery pastry</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Pharmacy</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Food trade</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Well-being and leisure</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Ready to wear</a>
+            </div>
+
+            <div class="w-full sm:w-1/2 lg:w-1/4 space-y-3 sm:pl-4 pt-10 lg:pt-0">
+                <h4 class="text-xl font-bold text-gray-900 pb-3">In regards to</h4>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Our blog</a>
+                <div class="flex items-center space-x-2">
+                    <a class="block hover:text-blue-600 transition ease-in-out" href="#">Career</a>
+                    <a class="block text-blue-600 bg-blue-100 rounded p-1" href="#">We are recruiting ✌</a>
+                </div>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Teams</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Terms and conditions</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Privacy policy</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Legal Notice</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center justify-center md:justify-between py-5">
+            <!-- apps -->
+            <div class="flex items-center space-x-4">
+                <p class="text-sm">Download our app!</p>
+                <div class="flex space-x-px">
+                    <a href="#"><img src="assets/app-store.svg" alt=""></a>
+                    <a href="#"><img src="assets/google-play.svg" alt="">   </a>
+                </div>
+            </div>
+            <!-- social icons -->
+            <div class="flex items-center space-x-3 pt-4 md:pt-0">
+                <a class="bg-blue-100 hover:bg-blue-200 transition ease-in-out rounded flex items-center justify-center w-10 h-10" href="#" target="_blank">
+                    <img src="https://uploads-ssl.webflow.com/5f180e58c1906f15359f4591/5f7de8194cb58771f05e1a5d_Vector%20(31)%20(1).svg" loading="lazy" alt="black linkedin logo">
+                </a>
+                <a class="bg-blue-100 hover:bg-blue-200 transition ease-in-out rounded flex items-center justify-center w-10 h-10" href="#" target="_blank">
+                    <img src="https://uploads-ssl.webflow.com/5f180e58c1906f15359f4591/5f7de8196577672918bedd42_Vector%20(32)%20(1).svg" loading="lazy" alt="black twitter logo">
+                </a>
+                <a class="bg-blue-100 hover:bg-blue-200 transition ease-in-out rounded flex items-center justify-center w-10 h-10" href="#" target="_blank">
+                    <img src="https://uploads-ssl.webflow.com/5f180e58c1906f15359f4591/5f7de81975ad90efbc533fa0_003-instagram%20(1).svg" loading="lazy" alt="black facebook logo">
+                </a>
+                <a class="bg-blue-100 hover:bg-blue-200 transition ease-in-out rounded flex items-center justify-center w-10 h-10" href="#" target="_blank">
+                    <img src="https://uploads-ssl.webflow.com/5f180e58c1906f15359f4591/5f7de81944aa15d50d42b2d0_Group%20(13)%20(1).svg" loading="lazy" width="18" alt="black instagram logo">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
