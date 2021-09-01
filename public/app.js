@@ -23,3 +23,12 @@ for (let i = 0; i < menuBtn.length; i++) {
         mobileMenu.classList.toggle('-translate-y-full');
     })
 }
+
+
+// =============== scroll indicator ===============
+window.onscroll = function () {
+  let pos = document.documentElement.scrollTop;
+  let calc_height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  let scroll = pos * 100 / calc_height;
+  document.getElementById('progress').style.width = scroll  + "%" ;
+}
