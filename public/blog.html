@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skello | Blog</title>
+    <link rel="icon" href="assets/logo-self.svg">
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="fixed z-40 top-0 left-0 right-0 w-full bg-blue-600">
+            <div class="max-w-7xl mx-auto flex items-center justify-between h-20 px-5 md:px-12">
+                <div class="w-full flex items-center justify-between">
+                    <div class="flex">
+                        <a class="w-24" href="index.html">
+                            <img src="assets/logo-white.svg" alt="">
+                        </a>
+
+                        <div class="w-px h-6 mx-4 bg-white"></div>
+
+                        <a class="font-bold text-white" href="#">Blog</a>
+                    </div>
+
+                    <!-- desktop menu -->
+                    <div class="hidden lg:flex items-center justify-between w-full">
+                        <div class="flex">
+                            <!-- dropdown -->
+                            <div class="relative group ml-28 cursor-pointer">
+                                <div class="flex items-center text-white hover:bg-blue-800/50 transition ease-in-out space-x-3 rounded py-2 px-4">
+                                    <p class="font-medium">Sectors</p>
+                                    <svg class="group-hover:rotate-180 transform transition ease-in-out h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </div>
+                                <div class="hidden group-hover:block absolute top-10 -left-16 w-80 box-shadow-tight bg-white rounded-lg font-medium py-6 px-5">
+                                    <a class="block p-3 rounded hover:bg-brand-light-blue transition ease-in-out" href="#">Restoration</a>
+                                    <a class="block p-3 rounded hover:bg-brand-light-blue transition ease-in-out" href="#">Food shops</a>
+                                    <a class="block p-3 rounded hover:bg-brand-light-blue transition ease-in-out" href="#">Hotel</a>
+                                    <a class="block p-3 rounded hover:bg-brand-light-blue transition ease-in-out" href="#">Health</a>
+                                    <a class="block p-3 rounded hover:bg-brand-light-blue transition ease-in-out" href="#">Wellness & leisure services</a>
+                                    <a class="block p-3 rounded hover:bg-brand-light-blue transition ease-in-out" href="#">Bakery pastry</a>
+                                    <a class="block p-3 rounded hover:bg-brand-light-blue transition ease-in-out" href="#">Specialized distribution</a>
+                                </div>
+                            </div>
+
+                            <a class="font-medium text-white hover:bg-blue-800/50 transition ease-in-out space-x-3 rounded ml-8 py-2 px-4" href="#">Our team</a>
+
+                            <a class="font-medium text-white hover:bg-blue-800/50 transition ease-in-out space-x-3 rounded ml-8 py-2 px-4" href="#">Our solution</a>
+                        </div>
+
+                        <a class="font-medium text-blue-500 bg-white rounded py-2 px-4 hover:bg-opacity-90 transition ease-in-out" href="#">Skello.io</a>
+                    </div>
+
+                    <!-- hamburger button -->
+                    <button class="menuBtn lg:hidden">
+                        <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- mobile menu -->
+        <div class="mobileMenu fixed z-40 top-0 left-0 right-0 w-full -translate-y-full transform transition ease-in-out duration-300 bg-brand-blue h-screen px-5 md:px-12">
+            <div class="w-full flex items-center justify-between h-20">
+                <div class="flex">
+                    <a class="w-24" href="index.html">
+                        <img src="assets/logo-white.svg" alt="">
+                    </a>
+
+                    <div class="w-px h-6 mx-4 bg-white"></div>
+
+                    <a class="font-bold text-white" href="#">Blog</a>
+                </div>
+
+                <!-- x button -->
+                <button class="menuBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- menu -->
+            <div class="w-full">
+                <!-- dropdown -->
+                <div class="group border-b border-gray-400/30 border-t">
+                    <div class="flex items-center justify-between hover:bg-blue-800/50 transition ease-in-out py-4 px-4">
+                        <p class="font-medium text-white">Sectors</p>
+                        <svg class="group-hover:rotate-180 transform transition ease-in-out text-white h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                    <div class="hidden group-hover:block bg-brand-blue rounded-lg font-medium space-y-0.5 py-6 px-5">
+                        <a class="block p-3 rounded bg-white/10 transition ease-in-out text-white" href="#">Restoration</a>
+                        <a class="block p-3 rounded bg-white/10 transition ease-in-out text-white" href="#">Food shops</a>
+                        <a class="block p-3 rounded bg-white/10 transition ease-in-out text-white" href="#">Hotel</a>
+                        <a class="block p-3 rounded bg-white/10 transition ease-in-out text-white" href="#">Health</a>
+                        <a class="block p-3 rounded bg-white/10 transition ease-in-out text-white" href="#">Wellness & leisure services</a>
+                        <a class="block p-3 rounded bg-white/10 transition ease-in-out text-white" href="#">Bakery pastry</a>
+                        <a class="block p-3 rounded bg-white/10 transition ease-in-out text-white" href="#">Specialized distribution</a>
+                    </div>
+                </div>
+
+                <a class="block font-medium border-b border-gray-400/30 hover:bg-blue-800/50 transition ease-in-out text-white py-4 px-4" href="#">Our team</a>
+
+                <a class="block font-medium border-b border-gray-400/30 hover:bg-blue-800/50 transition ease-in-out text-white py-4 px-4" href="#">Our solution</a>
+
+            </div>
+            <a class="absolute bottom-8 left-12 right-12 block text-center font-medium bg-blue-600 text-white rounded py-4 px-4 hover:bg-opacity-90 transition ease-in-out" href="#">Skello.io</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- hero -->
+        <section>
+            <div class="h-screen flex flex-col items-center justify-center bg-blue-600 text-white -mt-10 px-5">
+                <h3 class="text-lg lg:text-2xl pb-8">HR • 3min</h3>
+                <h1 class="text-4xl lg:text-6xl lg:leading-snug font-medium text-center pb-8">Automation of team schedules: <br> why and how does it work?</h1>
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 rounded-full">
+                        <img class="w-full" src="assets/person.png" alt="">
+                    </div>
+                    <div>
+                        <p>Minea</p>
+                        <p class="text-blue-50">17 August 2021 - Updated 30.08.2021</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-5xl mx-auto -mt-24 px-10">
+                <img class="rounded-xl" src="assets/hero-card.jpg" alt="">
+            </div>
+        </section>
+
+        <!-- digitization -->
+        <section class="relative max-w-7xl mx-auto flex items-start justify-between border-b-2 py-16 px-5">
+            <!-- social icons -->
+            <div class="sticky top-24 space-y-4 pt-10">
+                <a class="rounded-full flex items-center justify-center bg-gray-200 w-12 h-12" href="https://www.linkedin.com/company/skello/" target="_blank">
+                    <img src="https://uploads-ssl.webflow.com/5f180e58c1906f15359f4591/5f71a9889eed334ae757340c_Group%2011%20(2)%20(1).svg" loading="lazy" alt="black linkedin logo">
+                </a>
+                <a class="rounded-full flex items-center justify-center bg-gray-200 w-12 h-12" href="https://www.linkedin.com/company/skello/" target="_blank">
+                    <img src="https://uploads-ssl.webflow.com/5f180e58c1906f15359f4591/5f71a9883e9d5df8be922579_Vector%20(25)%20(1).svg" loading="lazy" alt="black twitter logo">
+                </a>
+                <a class="rounded-full flex items-center justify-center bg-gray-200 w-12 h-12" href="https://www.linkedin.com/company/skello/" target="_blank">
+                    <img src="https://uploads-ssl.webflow.com/5f180e58c1906f15359f4591/5f71a9887328f55a21b72796_Vector%20(26)%20(1).svg" loading="lazy" alt="black facebook logo">
+                </a>
+            </div>
+
+            <!-- main content -->
+            <div class="max-w-3xl mx-auto font-medium text-[17px] leading-8 pl-4 lg:pl-20 xl:pl-40">
+                <p class="pb-14">Automation is the fact of using technologies or applications, software that will perform a low-value or repetitive task for you. Thanks to automation, these missions or “tasks” can be started or processed in just a few clicks, with less effort; And often, for maximum results! Since it is well known that the least rewarding tasks are also often those which take the most time, even if they are not pleasant, it is therefore essential to do them well.</p>
+
+                <h1 class="font-bold text-4xl pb-14">👾 Digitization: a global trend</h1>
+
+                <p class="pb-14">As said previously, more and more companies (and this does not only concern large groups!) Are deciding to digitize their organization to boost their business. This allows them, on the one hand, to clean up working time by putting aside boring tasks, but also to instill innovation by having more time for strategy. And we know how important originality and creativity are to stand out.</p>
+
+                <p class="pb-14">In a society where everything is always going faster and where performance is the key word, digitalization makes it possible to streamline processes and increase team productivity.</p>
+
+                <p class="pb-14">Companies are also going digital because they have no other choice: if all the competition does, they are forced to align in order to hope to offer a service or products superior or at least equal.</p>
+
+                <p class="pb-14">If we zoom out to look at HR management as a whole and precisely the planning of work schedules, we realize that automating it allows managers or managers, at their level, to focus on more tasks. high added value. And this, both for them and their personal progression towards success, and for the business interests of the company.</p>
+
+                <p class="pb-14">In personnel management, several aspects of the planning and communication of schedules can be automated.</p>
+
+                <h1 class="font-bold text-4xl pb-14">📆 Automate your teams' schedule</h1>
+
+                <p class="pb-14">There is a <a class="underline" href="#">lot of software</a> that allows you to automate your planning and personnel management. For example, Skello, beyond offering you to create and communicate your schedules in a few clicks, allows you to plan more intelligently with its Smart Planner technology. Thanks to an algorithm, your schedules will be done automatically by taking into account the rules of your structure, the positions and the preferences of your employees. Thus, the schedules are created automatically and will optimize the working time of each employee to minimize your personnel costs. </p>
+
+                <p class="font-bold pb-14">🧠 To discover Smart Planner, <a class="underline" href="#">it's here</a> .</p>
+
+                <p class="pb-14">Planning effortlessly and quickly is good, but it's not enough </p>
+
+                <p class="pb-14">! It is also necessary to ensure that you have the right person at the right time, in the right place, to be able to follow the different hours actually worked and worked, to trace arrivals and departures in establishments ... In short, to have a global and centralized HR vision to take then the best decisions for his business. </p>
+
+                <p class="font-bold text-lg pb-14">Leader on the French market, Skello has developed multiple functionalities since 2016 to meet these needs, for all industries: </p>
+
+                <p class="pb-5"><a class="underline" href="#">👉</a> Create and optimize personnel schedules in a few clicks, by duplicating weeks and saving standard schedule models</p>
+
+                <p class="pb-5"><a class="underline" href="#">👉</a> Print the schedules in the desired format and communicate them via different communication channels</p>
+
+                <p class="pb-5"><a class="underline" href="#">👉</a> Retrieve all payroll variable data to export or import them into your payroll software</p>
+
+                <p class="pb-5"><a class="underline" href="#">👉</a> Track specific productivity and business goals using dashboards</p>
+
+                <p class="pb-14"><a class="underline" href="#">👉</a> Centralize your entire personnel register, with a history of contracts, documents stored and generated automatically and notifications so as not to miss any HR deadlines</p>
+
+                <p class="pb-14">In conclusion, automating your schedule management is quite simply to speed up the organization of work from the creation of shifts to payroll. This does not mean losing control, since on the contrary, with a schedule management software, you keep an eye on everything that is happening in the field. In general, managers make fewer data entry errors and can also make the best choices and readjust their choices to optimize their staff ratio. Automating your planning management in Excel is not the best option, since it will still require great thoroughness and will not improve communication with your employees; Whatever software you choose, it seems obvious that you no longer waste time manually entering and communicating schedules. Then,</p>
+
+                <h1 class="font-bold text-4xl pb-14">🚀 <a class="underline" href="#">Try Skello</a> now!</h1>
+            </div>
+
+            <div class="hidden md:block sticky top-24 bg-blue-600 rounded-lg w-52 lg:w-60 flex-shrink-0 p-6 mt-10 ml-4">
+                <div class="w-12 h-12 flex items-center justify-center bg-white rounded-full mb-4">
+                    <img class="" src="assets/logo-self.svg" alt="">
+                </div>
+                <p class="text-white font-medium pb-4">Manage the complexity of staff schedules and assess your profitability</p>
+                <a class="bg-blue-800/60 rounded-md text-white text-sm text-center block py-2 px-4" href="#">Reuest a demo</a>
+            </div>
+
+        </section>
+
+        <!-- similar articles -->
+        <section class="max-w-7xl mx-auto pt-16 px-5 sm:px-12">
+            <!-- heading -->
+            <div class="pb-5">
+                <h1 class="text-3xl font-medium">Similar articles</h1>
+            </div>
+            <!-- cards -->
+            <div class="md:flex items-start w-full space-y-4 md:space-y-0 md:space-x-4">
+                <a class="card block w-full md:w-1/3 rounded-xl p-3 space-y-4 hover:scale-105 transform transition ease-in-out duration-500" href="#">
+                    <img class="w-full rounded-xl" src="assets/hero-card.jpg" alt="">
+                    <div class="flex items-center text-sm space-x-2">
+                        <p class=" font-medium bg-blue-500 text-white rounded py-1 px-3 hover:bg-opacity-90 transition ease-in-out" href="#">Sectors</p>
+                        <p>•</p>
+                        <p>3 min</p>
+                    </div>
+                    <h2 class="text-xl">👋 Come spend a month with us!</h2>
+                    <p class="text-gray-400 font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, alias voluptas ipsum vero laboriosam voluptate...</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="rounded-full w-8 h-8">
+                            <img class="w-full" src="assets/person.png" alt="">
+                        </div>
+                        <p>Minea</p>
+                    </div>
+                </a>
+
+                <a class="card block w-full md:w-1/3 rounded-xl p-3 space-y-4 hover:scale-105 transform transition ease-in-out duration-500" href="#">
+                    <img class="w-full rounded-xl" src="assets/hero-card.jpg" alt="">
+                    <div class="flex items-center text-sm space-x-2">
+                        <p class=" font-medium bg-blue-500 text-white rounded py-1 px-3 hover:bg-opacity-90 transition ease-in-out" href="#">Sectors</p>
+                        <p>•</p>
+                        <p>3 min</p>
+                    </div>
+                    <h2 class="text-xl">👋 Come spend a month with us!</h2>
+                    <p class="text-gray-400 font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, alias voluptas ipsum vero laboriosam voluptate...</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="rounded-full w-8 h-8">
+                            <img class="w-full" src="assets/person.png" alt="">
+                        </div>
+                        <p>Minea</p>
+                    </div>
+                </a>
+
+                <a class="card block w-full md:w-1/3 rounded-xl p-3 space-y-4 hover:scale-105 transform transition ease-in-out duration-500" href="#">
+                    <img class="w-full rounded-xl" src="assets/hero-card.jpg" alt="">
+                    <div class="flex items-center text-sm space-x-2">
+                        <p class=" font-medium bg-blue-500 text-white rounded py-1 px-3 hover:bg-opacity-90 transition ease-in-out" href="#">Sectors</p>
+                        <p>•</p>
+                        <p>3 min</p>
+                    </div>
+                    <h2 class="text-xl">👋 Come spend a month with us!</h2>
+                    <p class="text-gray-400 font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, alias voluptas ipsum vero laboriosam voluptate...</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="rounded-full w-8 h-8">
+                            <img class="w-full" src="assets/person.png" alt="">
+                        </div>
+                        <p>Minea</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <hr class="w-full h-0.5 border-gray-300 my-12">
+
+
+
+        <!-- plan your successes -->
+        <section class="flex flex-col items-center justify-center py-20 lg:pt-40 lg:pb-60 px-5">
+            <h1 class="text-3xl md:text-5xl font-bold pb-6">Plan your successes!</h1>
+            <p class="text-gray-500 pb-6">Full access to news in your sector!</p>
+            <div class="relative w-full sm:w-auto">
+                <form class="relative z-20 bg-white rounded-lg box-shadow flex flex-col sm:flex-row items-center w-full sm:w-500 space-y-2 sm:space-y-0 sm:space-x-2 p-6 mb-6" action="">
+                    <input class="bg-gray-200 placeholder-gray-500 w-full sm:w-2/3 rounded h-14 p-3 focus:outline-none" type="email" name="" id="" placeholder="Enter your e-mail">
+                    <input class="font-medium rounded bg-blue-500 hover:bg-opacity-90 transition ease-in-out text-white w-40 sm:w-1/3 h-14" type="submit" value="Register now">
+                </form>
+                <img class="hidden lg:block absolute z-0 -left-40 -top-12" src="assets/shape-light-blue.svg" alt="">
+                <img class="hidden lg:block absolute z-0 bootom-0 -right-10" src="assets/shape-dark-blue.svg" alt="">
+                <img class="hidden lg:block absolute z-0 -top-20 -right-24" src="assets/shape-yellow.svg" alt="">
+            </div>
+        </section>
+    </main>
+
+    <footer class="max-w-7xl mx-auto px-5 sm:px-12">
+        <div class="flex flex-wrap items-start justify-between text-gray-500 text-medium text-sm">
+            <div class="w-full sm:w-1/2 lg:w-1/4 space-y-6">
+                <img src="assets/logo.svg" alt="">
+                <p>© Skello, 112, Avenue de Paris - CS 60002 94306 Vincennes Cedex</p>
+            </div>
+
+            <div class="w-full sm:w-1/2 lg:w-1/4 space-y-3 sm:pl-4 pt-10 sm:pt-0">
+                <h4 class="text-xl font-bold text-gray-900 pb-3">Our product</h4>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Make your schedule in a few clicks</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Plan smarter with Smart Planner</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Communicate in real time</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Automatically process your payroll</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Manage your different sites</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Manage arrivals and departures</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Generate documents for your employees</a>
+            </div>
+
+            <div class="w-full sm:w-1/2 lg:w-1/4 space-y-3 lg:pl-4 pt-10 lg:pt-0">
+                <h4 class="text-xl font-bold text-gray-900 pb-3">Solutions</h4>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">All sectors</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Restoration</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Hotel</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Bakery pastry</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Pharmacy</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Food trade</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Well-being and leisure</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Ready to wear</a>
+            </div>
+
+            <div class="w-full sm:w-1/2 lg:w-1/4 space-y-3 sm:pl-4 pt-10 lg:pt-0">
+                <h4 class="text-xl font-bold text-gray-900 pb-3">In regards to</h4>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Our blog</a>
+                <div class="flex items-center space-x-2">
+                    <a class="block hover:text-blue-600 transition ease-in-out" href="#">Career</a>
+                    <a class="block text-blue-600 bg-blue-100 rounded p-1" href="#">We are recruiting ✌</a>
+                </div>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Teams</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Terms and conditions</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Privacy policy</a>
+                <a class="block hover:text-blue-600 transition ease-in-out" href="#">Legal Notice</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center justify-center md:justify-between py-5">
+            <!-- apps -->
+            <div class="flex items-center space-x-4">
+                <p class="text-sm">Download our app!</p>
+                <div class="flex space-x-px">
+                    <a href="#"><img src="assets/app-store.svg" alt=""></a>
+                    <a href="#"><img src="assets/google-play.svg" alt="">   </a>
+                </div>
+            </div>
+            <!-- social icons -->
+            <div class="flex items-center space-x-3 pt-4 md:pt-0">
+                <a class="bg-blue-100 hover:bg-blue-200 transition ease-in-out rounded flex items-center justify-center w-10 h-10" href="#" target="_blank">
+                    <img src="https://uploads-ssl.webflow.com/5f180e58c1906f15359f4591/5f7de8194cb58771f05e1a5d_Vector%20(31)%20(1).svg" loading="lazy" alt="black linkedin logo">
+                </a>
+                <a class="bg-blue-100 hover:bg-blue-200 transition ease-in-out rounded flex items-center justify-center w-10 h-10" href="#" target="_blank">
+                    <img src="https://uploads-ssl.webflow.com/5f180e58c1906f15359f4591/5f7de8196577672918bedd42_Vector%20(32)%20(1).svg" loading="lazy" alt="black twitter logo">
+                </a>
+                <a class="bg-blue-100 hover:bg-blue-200 transition ease-in-out rounded flex items-center justify-center w-10 h-10" href="#" target="_blank">
+                    <img src="https://uploads-ssl.webflow.com/5f180e58c1906f15359f4591/5f7de81975ad90efbc533fa0_003-instagram%20(1).svg" loading="lazy" alt="black facebook logo">
+                </a>
+                <a class="bg-blue-100 hover:bg-blue-200 transition ease-in-out rounded flex items-center justify-center w-10 h-10" href="#" target="_blank">
+                    <img src="https://uploads-ssl.webflow.com/5f180e58c1906f15359f4591/5f7de81944aa15d50d42b2d0_Group%20(13)%20(1).svg" loading="lazy" width="18" alt="black instagram logo">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
